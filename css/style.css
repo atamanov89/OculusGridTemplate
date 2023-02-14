@@ -1,22 +1,118 @@
-html{
-  box-sizing: border-box;
+@font-face {
+  font-family: "Helvetica", sans-serif;
+  src: url("../fonts/helvetica.woff2");
+  font-style: normal;
+  font-weight: 400;
+}
+@font-face {
+  font-family: "Helvetica-Bold", sans-serif;
+  src: url("../fonts/helvetica-bold.woff2");
+  font-style: normal;
+  font-weight: 700;
+}
+body {
+  font-family: "Helvetica", sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.4;
+  color: #5c5c5e;
+}
+.container {
+  max-width: 1220px;
+  padding: 0 10px;
+  margin: 0 auto;
+}
+.header {
+  background-color: #f6f4f5;
+  border-bottom: 1px solid #cacad6;
+}
+.nav {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  align-items: center;
+  height: 80px;
+}
+.menu {
+  display: flex;
+  margin-right: auto;
+  gap: 0 20px;
+}
+.menu li a {
+  text-transform: uppercase;
+}
+.logo {
+  margin: 0 auto;
+}
+.basket {
+  position: relative;
+  margin-left: auto;
+}
+.basket > span {
+  position: absolute;
+  bottom: 0;
+  right: -5px;
+  font-size: 12px;
+  line-height: 1;
+  min-width: 16px;
+  height: 16px;
+  padding: 2px;
+  background-color: #000;
+  color: #fff;
+  text-align: center;
+  border-radius: 50%;
 }
 
-*,
-*::before,
-*::after{
-  box-sizing: inherit;
+.top {
+  background-image: url("../images/hero.jpg");
+  background-position: bottom center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  min-height: calc(100vh - 81px);
+  padding-top: 10%;
 }
-
-a{
-  color: inherit;
-  text-decoration: none;
+.title,
+.sub-title {
+  color: #5c5c5e;
+  font-weight: 400;
+  margin: 5px 0;
 }
-
-li{
-  list-style: none;
+.title {
+  font-size: 96px;
+  line-height: 110px;
 }
-
-img{
-  max-width: 100%;
+.sub-title {
+  font-size: 36px;
+  line-height: 41px;
+}
+.title-description,
+.btn-group__decription {
+  font-size: 13px;
+  line-height: 15px;
+}
+.btn-group {
+  margin: 50px 0 10px 0;
+}
+.btn-group > .btn-expanded {
+  display: flex;
+  cursor: pointer;
+  padding: 0;
+  margin: 0;
+  border: none;
+  text-transform: uppercase;
+  background-color: transparent;
+  border: 2px solid transparent;
+  border-image: linear-gradient(#bc10d8, rgba(80, 0, 250, 0.93));
+  -moz-border-image: -moz-linear-gradient(#bc10d8, rgba(80, 0, 250, 0.93));
+  -webkit-border-image: -webkit-linear-gradient(#bc10d8, rgba(80, 0, 250, 0.93));
+  border-image-slice: 1;
+}
+.btn-expanded span {
+  display: block;
+  padding: 21px 111px;
+  color: #5C5C5E;
+  font-weight: 700;
+}
+.btn-expanded span:first-child {
+  color: #F6F4F5;
+  background: linear-gradient(180deg, #bc10d8 0%, rgba(80, 0, 250, 0.93) 100%);
 }
