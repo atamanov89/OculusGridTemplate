@@ -16,6 +16,7 @@ body {
   font-size: 16px;
   line-height: 1.4;
   color: #5c5c5e;
+  padding-bottom: 100px;
 }
 .container {
   max-width: 1220px;
@@ -69,6 +70,7 @@ body {
   background-repeat: no-repeat;
   min-height: calc(100vh - 81px);
   padding-top: 10%;
+  padding-bottom: 5%;
 }
 .title,
 .sub-title {
@@ -109,10 +111,125 @@ body {
 .btn-expanded span {
   display: block;
   padding: 21px 111px;
-  color: #5C5C5E;
+  color: #5c5c5e;
   font-weight: 700;
 }
 .btn-expanded span:first-child {
-  color: #F6F4F5;
+  color: #f6f4f5;
   background: linear-gradient(180deg, #bc10d8 0%, rgba(80, 0, 250, 0.93) 100%);
+}
+
+/* features start */
+
+.features {
+  margin-top: 100px;
+}
+.fetures-titles {
+  display: grid;
+  grid-template-columns: 300px 1fr;
+  margin-bottom: 20px;
+}
+.fetures-titles__small-title {
+  color: #5c5c5e;
+  text-transform: uppercase;
+  font-weight: 400;
+}
+.fetures-titles__large-title {
+  max-width: 330px;
+  background: linear-gradient(#bc10d8 0%, #5000fa 93%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-transform: uppercase;
+  color: #bc10d8;
+  font-size: 36px;
+  line-height: 42px;
+  font-weight: 400;
+}
+.features-tabs {
+  display: grid;
+  grid-template-columns: 300px 1fr;
+}
+
+.tab-navs__link{
+  display: block;
+  width: 100%;
+  text-align: left;
+  cursor: pointer;
+  border: none;
+  background-color: transparent;
+  color: #5C5C5E;
+  margin: 10px 0;
+  font-weight: 700;
+}
+.tab-navs__link.active{
+  color: #000;
+}
+
+/*
+.features-tabs__content {
+  display: grid;
+  grid-template-columns: 580px 1fr;
+  grid-template-rows: auto auto;
+  gap: 0 20px;
+}
+.tab-content__image {
+  grid-row-start: 1;
+  grid-row-end: 3;
+}
+.tab-content__description h4{
+  color: #5C5C5E;
+  text-transform: uppercase;
+  margin-bottom: 10px;
+}
+.tab-content__description p{
+  line-height: 19px;
+}
+.tab-content__video {
+  margin-top: auto;
+} */
+
+.features-tabs__content {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: 150px 150px;
+  gap: 0 20px;
+  grid-template-areas:
+    "image image description"
+    "image image video";
+}
+.tab-content__image {
+  grid-area: image;
+  position: relative;
+}
+.tab-content__image img{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.tab-content__description {
+  grid-area: description;
+}
+.tab-content__description h4 {
+  color: #5c5c5e;
+  text-transform: uppercase;
+  margin-bottom: 10px;
+}
+.tab-content__description p {
+  line-height: 19px;
+}
+.tab-content__video {
+  grid-area: video;
+  position: relative;
+  margin-top: auto;
+}
+.tab-content__image img{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
